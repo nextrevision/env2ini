@@ -37,7 +37,9 @@ consecutive.
 To update a SQL connection string in `/etc/keystone/keystone.conf`, a variable
 would be exported as
 
-```KEYSTONE__DATABASE__CONNECTION=mysql://user:pass@host:3306/db```
+```
+KEYSTONE__DATABASE__CONNECTION=mysql://user:pass@host:3306/db
+```
 
 After running `osenv2ini`, we could expect the following in
 `/etc/keystone/keystone.conf`:
