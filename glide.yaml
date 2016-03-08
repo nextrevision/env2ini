@@ -1,0 +1,3 @@
+package: github.com/thisendout/osenv2cfg
+import:
+- package: gopkg.in/ini.v1
