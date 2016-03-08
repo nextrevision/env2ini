@@ -40,11 +40,11 @@ func main() {
 				}
 
 				if match["Prefix"] == config.EnvPrefix {
-					section := match["Section"]
-					key := strings.ToLower(match["Key"])
+					section := sanitize(match["Section"])
+					key := strings.ToLower(sanitize(match["Key"]))
 
 					if match["Section"] != config.Defaults {
-						section = strings.ToLower(match["Section"])
+						section = strings.ToLower(section)
 					}
 
 					if err := config.updateSetting(section, key, envValue); err != nil {
@@ -64,4 +64,15 @@ func main() {
 			log.Debug("Skipping key: ", envKey)
 		}
 	}
+}
+
+// sanitize replaces reserved words in variables to their symbol counterpart
+func sanitize(value string) string {
+	dotRegex := regexp.MustCompile("_?DOT_?")
+	slashRegex := regexp.MustCompile("_?SLASH_?")
+	colonRegex := regexp.MustCompile("_?COLON_?")
+	value = dotRegex.ReplaceAllString(value, ".")
+	value = slashRegex.ReplaceAllString(value, "/")
+	value = colonRegex.ReplaceAllString(value, ":")
+	return value
 }

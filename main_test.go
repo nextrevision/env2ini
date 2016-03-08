@@ -33,3 +33,33 @@ func TestMain(t *testing.T) {
 	}
 	os.Remove("test.ini")
 }
+
+func TestSanitize(t *testing.T) {
+	if sanitize("TEST_DOT") != "TEST." {
+		t.Error("Does not convert: TEST_DOT to TEST.")
+	}
+	if sanitize("TEST_DOT_") != "TEST." {
+		t.Error("Does not convert: TEST_DOT_ to TEST.")
+	}
+	if sanitize("DOT_TEST") != ".TEST" {
+		t.Error("Does not convert: DOT_TEST to .TEST")
+	}
+	if sanitize("TEST_SLASH") != "TEST/" {
+		t.Error("Does not convert: TEST_SLASH to TEST/")
+	}
+	if sanitize("TEST_SLASH_") != "TEST/" {
+		t.Error("Does not convert: TEST_SLASH_ to TEST/")
+	}
+	if sanitize("SLASH_TEST") != "/TEST" {
+		t.Error("Does not convert: SLASH_TEST to /TEST")
+	}
+	if sanitize("TEST_COLON") != "TEST:" {
+		t.Error("Does not convert: TEST_COLON to TEST:")
+	}
+	if sanitize("TEST_COLON_") != "TEST:" {
+		t.Error("Does not convert: TEST_COLON_ to TEST:")
+	}
+	if sanitize("COLON_TEST") != ":TEST" {
+		t.Error("Does not convert: COLON_TEST to :TEST")
+	}
+}
