@@ -2,7 +2,7 @@
 
 [![Circle CI](https://circleci.com/gh/nextrevision/env2ini.svg?style=svg)](https://circleci.com/gh/nextrevision/env2ini)
 
-Converts shell environment variables to OpenStack INI configuration files.
+Creates and updates INI files from environment variables.
 
 ## Usage
 
@@ -11,9 +11,9 @@ Usage of env2ini:
   -debug
         enable debug logging
   -filename string
-        destination filename for writing settings (requires -prefix)
+        destination filename for writing settings (required)
   -prefix string
-        environment prefix to look for keys (requires -filename)
+        environment prefix to look for keys (required)
 ```
 
 To configure the file `/etc/config.ini` with environment variables starting
@@ -22,6 +22,7 @@ with `MYAPP`, you would run:
 ```
 $ export MYAPP__DEFAULT__conn="mysql://user:pass@mysql/myapp"
 $ export MYAPP__section1__key1=myapp_value1
+
 $ ./env2ini -filename /etc/config.ini -prefix MYAPP
 INFO[0000] Updated setting                               key=conn section=DEFAULT
 INFO[0000] Updated setting                               key=key1 section=section1
