@@ -85,8 +85,8 @@ use = egg:Paste#urlmap
 We can use the following exported variables:
 
 ```
-MYAPP_PASTE__COMPOSITE_COLON_MAIN__USE='egg:Paste#urlmap'
-MYAPP_PASTE__COMPOSITE_COLON_MAIN__SLASH_V2_DOT_0='public_api'
-MYAPP_PASTE__COMPOSITE_COLON_MAIN__SLASH_V3='api_v3'
-MYAPP_PASTE__COMPOSITE_COLON_MAIN__SLASH='public_version_api'
+MYAPP__COMPOSITE_COLON_MAIN__USE='egg:Paste#urlmap'
+MYAPP__COMPOSITE_COLON_MAIN__SLASH_V2_DOT_0='public_api'
+MYAPP__COMPOSITE_COLON_MAIN__SLASH_V3='api_v3'
+MYAPP__COMPOSITE_COLON_MAIN__SLASH='public_version_api'
 ```
