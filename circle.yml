@@ -2,3 +2,6 @@ test:
   override:
     - go test -v ./...
     - go vet ./...
+    - make build-ci
+  post:
+    - mv osenv2ini_* $CIRCLE_ARTIFACTS/

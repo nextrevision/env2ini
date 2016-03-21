@@ -18,12 +18,12 @@ var Configs = []Config{
 	Config{
 		EnvPrefix: "KEYSTONE",
 		Filename:  "/etc/keystone/keystone.conf",
-		Defaults:  "DEFAULTS",
+		Defaults:  "DEFAULT",
 	},
 	Config{
 		EnvPrefix: "KEYSTONE_PASTE",
 		Filename:  "/etc/keystone/keystone-paste.ini",
-		Defaults:  "DEFAULTS",
+		Defaults:  "DEFAULT",
 	},
 }
 
