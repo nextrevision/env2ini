@@ -4,4 +4,4 @@ test:
     - go vet ./...
     - make build-ci
   post:
-    - mv osenv2ini_* $CIRCLE_ARTIFACTS/
+    - mv env2ini_* $CIRCLE_ARTIFACTS/

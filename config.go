@@ -10,21 +10,6 @@ import (
 type Config struct {
 	EnvPrefix string
 	Filename  string
-	Defaults  string
-}
-
-// Configs is a slice of all config structs to be tested against
-var Configs = []Config{
-	Config{
-		EnvPrefix: "KEYSTONE",
-		Filename:  "/etc/keystone/keystone.conf",
-		Defaults:  "DEFAULT",
-	},
-	Config{
-		EnvPrefix: "KEYSTONE_PASTE",
-		Filename:  "/etc/keystone/keystone-paste.ini",
-		Defaults:  "DEFAULT",
-	},
 }
 
 // matchRegex is a named regex that matches an env key in the following format:

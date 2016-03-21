@@ -11,7 +11,6 @@ func TestMapMatch(t *testing.T) {
 	c := Config{
 		EnvPrefix: "TEST",
 		Filename:  "test.ini",
-		Defaults:  "DEFAULTS",
 	}
 
 	match, ok := c.mapMatch("TEST__SECTION_1__KEY_1")
@@ -35,7 +34,6 @@ func TestUpdateSetting(t *testing.T) {
 	c := Config{
 		EnvPrefix: "TEST",
 		Filename:  "test.ini",
-		Defaults:  "DEFAULTS",
 	}
 
 	if err := c.updateSetting("section1", "key1", "value1"); err != nil {

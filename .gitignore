@@ -25,4 +25,4 @@ _testmain.go
 
 *.swp
 
-osenv2ini_*
+env2ini_*
