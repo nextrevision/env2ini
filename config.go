@@ -3,7 +3,7 @@ package main
 import (
 	"regexp"
 
-	"gopkg.in/ini.v1"
+	"github.com/go-ini/ini"
 )
 
 // Config : struct for defining OpenStack backed configs
@@ -36,6 +36,7 @@ func (c *Config) mapMatch(key string) (map[string]string, bool) {
 
 // updateSetting writes the desired setting to the destination file
 func (c *Config) updateSetting(section string, key string, value string) error {
+	ini.DefaultHeader = true
 	cfg, err := ini.Load(c.Filename)
 	if err != nil {
 		return err

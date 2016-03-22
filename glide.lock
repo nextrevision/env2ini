@@ -1,8 +1,10 @@
-hash: 2f2bdea8800209f5796d6a67dbbf9cfc8305dfde22d34a98bcef98a82d311d23
-updated: 2016-03-08T16:40:50.602853647-05:00
+hash: 817441828fcb0d1d9a3a6985b64a65fdbb9b1e66c83d5d62372ec6ce89cfac15
+updated: 2016-03-21T20:26:34.371661494-04:00
 imports:
+- name: github.com/go-ini/ini
+  version: 12f418cc7edc5a618a51407b7ac1f1f512139df3
 - name: github.com/Sirupsen/logrus
-  version: 219c8cb75c258c552e999735be6df753ffc7afdc
+  version: 4b6ea7319e214d98c938f12692336f7ca9348d6b
 - name: gopkg.in/ini.v1
   version: 776aa739ce9373377cd16f526cdf06cb4c89b40f
 devImports: []
