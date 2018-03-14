@@ -15,7 +15,7 @@ go get github.com/nextrevision/env2ini
 With curl using a specific release:
 
 ```
-curl -o env2ini \
+curl -L -o env2ini \
   https://github.com/nextrevision/env2ini/releases/download/0.2.0/env2ini_linux_amd64
 chmod +x env2ini
 ```
